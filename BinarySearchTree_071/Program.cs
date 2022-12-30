@@ -44,7 +44,15 @@ namespace BinarySearchTree_071
                 tmp = new Node(element, null, null); //create a Node
                 if (parent == null) //if the tree is empty
                 {
-
+                    ROOT = tmp;
+                }
+                else if (string.Compare(element, parent.info) < 0)
+                {
+                    parent.leftchild = tmp;
+                }
+                else
+                {
+                    parent.rightchild = tmp;
                 }
             }
         }
