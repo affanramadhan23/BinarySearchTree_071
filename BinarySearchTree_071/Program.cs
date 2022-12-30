@@ -99,6 +99,20 @@ namespace BinarySearchTree_071
                 preorder(ptr.rightchild);
             }
         }
+        public void postorder(Node ptr) //Performs the postorder traversal of the tree
+        {
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is Empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.leftchild);
+                postorder(ptr.rightchild);
+                Console.WriteLine(ptr.info + " ");
+            }
+        }
     }
     internal class Program
     {
